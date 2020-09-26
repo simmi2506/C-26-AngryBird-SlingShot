@@ -1,10 +1,24 @@
+//step1
+//git hub installation and project clone
+
+//step2
+//create platform for the sling shot
+
+//step3
+//git status and show the file difference
+//git add
+//git commit
+
+
+
+
 const Engine = Matter.Engine;
 const World= Matter.World;
 const Bodies = Matter.Bodies;
 
 var engine, world;
 var box1, pig1;
-var backgroundImg;
+var backgroundImg, platform;
 
 function preload() {
     backgroundImg = loadImage("sprites/bg.png");
@@ -16,7 +30,10 @@ function setup(){
     world = engine.world;
 
     
-    ground = new Ground(600,height,1200,20)
+    ground = new Ground(600,height,1200,20);
+
+    //step1
+    platform = new Ground(160, 305, 300, 170);
 
     box1 = new Box(700,320,70,70);
     box2 = new Box(920,320,70,70);
@@ -59,4 +76,6 @@ function draw(){
     log5.display();
 
     bird.display();
+
+    platform.display();
 }
